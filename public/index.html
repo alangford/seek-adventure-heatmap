@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Seek Adventure Heatmaps</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+			  integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+			  crossorigin=""/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
+	</head>
+	<body ng-app="seekAdventure">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa fa-map-marker"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Seek Adventure HeatMaps</h1>
+								<p>This is a page to display different heatmaps based on the data that it receives.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Keys</a></li>
+								<li><a href="#work">Coins</a></li>
+								<li><a href="#about">Cinemark Prize</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Keys -->
+							<article id="intro" ng-controller="keyCtrl">
+								<h2 class="major">Keys</h2>
+								<div id="keyMap" style="height: 500px"></div>
+								<p class="major">This is a heatmap for the amount of keys that are hidden.</p>
+							</article>
+
+						<!-- Coins -->
+							<article id="work" ng-controller="coinCtrl">
+								<h2 class="major">Coins</h2>
+								<div id="coinMap" style="height: 500px"></div>
+								<p class="major">This is a heatmap for the amount of coins that are hidden.</p>
+							</article>
+
+						<!-- Cinemark -->
+							<article id="about" ng-controller="cinemarkCtrl">
+								<h2 class="major">Cinemark Prize's</h2>
+								<div id="cinemarkMap" style="height: 500px"></div>
+								<p class="major">This is a heatmap for the amount of Cinemark Prize's that are hidden.</p>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Andrew Langford. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		 <!--Scripts -->
+			<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+				integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+				crossorigin=""></script>
+			<script src="http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+			<script src="js/bundle.js"></script>
+			<!--<script src="app.js"></script>-->
+			<!--<script src="mainService.js"></script>-->
+			<!--<script src="coinsCtrl.js"></script>-->
+			<!--<script src="cinemarkCtrl.js"></script>-->
+			<!--<script src="keyCtrl.js"></script>-->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
