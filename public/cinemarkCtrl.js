@@ -7,7 +7,7 @@ angular.module("seekAdventure").controller("cinemarkCtrl",   function(   $scope,
 
 
         mainService.getCinemarkData().then(res=>{
-            let heat = L.heatLayer(res.data.features["0"].geometry.coordinates,{
+            let heat = L.heatLayer(res,{
                 radius: 25,
             }).addTo(cinemarkMap);
         });

@@ -8,7 +8,7 @@ angular.module("seekAdventure").controller("keyCtrl",   function(   $scope, main
 
 
         mainService.getKeysData().then(res=>{
-            let heat = L.heatLayer(res.data.features["0"].geometry.coordinates,{
+            let heat = L.heatLayer(res,{
                 radius: 25,
             }).addTo(keyMap);
         });
